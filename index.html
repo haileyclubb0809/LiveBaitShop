@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Howard’s Lakeside General Store, Live Bait, Springfield OH</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Live bait, tackle, licenses, camping supplies and more near Buck Creek State Park. Hours, location and bait prices.">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./">
+        <svg aria-hidden="true" viewBox="0 0 24 24" class="fish"><path d="M21 12c0 4-4 7-9 7-1.6 0-3.1-.3-4.5-.9L3 20l1.6-3.3A10.8 10.8 0 0 1 3 12c0-4 4-7 9-7s9 3 9 7zM8 12h.01M16 12h.01"/></svg>
+        <span>Howard’s Lakeside</span>
+      </a>
+
+      <nav aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+        <ul id="nav" class="nav">
+          <li><a aria-current="page" href="./">Home</a></li>
+          <li><a href="./live-bait.html">Live Bait and Prices</a></li>
+          <li><a href="#hours">Hours</a></li>
+          <li><a href="#location">Location</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container">
+      <picture>
+        <img src="./img/shore.jpg" alt="Fishing shoreline near Buck Creek with calm water at sunrise" width="1600" height="900">
+      </picture>
+      <div class="hero-text">
+        <h1>Live bait, friendly help, and quick stops on the way to the lake</h1>
+        <p>Pick up bait, tackle, hunting and fishing licenses, camping supplies, firewood, drinks and snacks. We are minutes from Buck Creek State Park.</p>
+        <div class="cta">
+          <a class="btn" href="./live-bait.html">View bait prices</a>
+          <a class="btn btn-alt" href="#location">Get directions</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container quick-list">
+      <h2>What we carry</h2>
+      <ul class="check">
+        <li>Live bait, worms, minnows, wax worms, leeches, seasonal cold bait</li>
+        <li>Tackle and reel respooling service</li>
+        <li>Fishing and hunting licenses</li>
+        <li>Camping supplies and firewood</li>
+        <li>Drinks, pop and snacks</li>
+      </ul>
+      <p class="note">Bait availability and prices change with season, check the Live Bait page for current info.</p>
+    </section>
+
+    <section class="container media">
+      <div class="media-col">
+        <h2>See the water level and recent catches</h2>
+        <p>Follow updates and new stock on Facebook. The shop posts bait arrivals and weekend specials.</p>
+        <p><a class="btn" href="https://www.facebook.com/p/Howards-Lakeside-General-Store-100057407261126/" rel="noopener">Open Facebook</a></p>
+      </div>
+      <div class="media-col">
+        <div class="video-wrap" aria-label="Fishing video">
+          <iframe title="Buck Creek fishing clips" width="560" height="315" src="https://www.youtube.com/embed/8cI6Nus18n8" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="hours" class="container hours">
+      <h2>Hours</h2>
+      <p>Typical hours are 7:00 AM to 7:00 PM daily. Hours may change for holidays and winter. Call to confirm.</p>
+      <p><strong>Phone:</strong> <a href="tel:+19375051037">(937) 505-1037</a>  <strong>Email:</strong> <a href="mailto:HowardsLakeside@gmail.com">HowardsLakeside@gmail.com</a></p>
+    </section>
+
+    <section id="location" class="container location">
+      <h2>Find us</h2>
+      <address>
+        <p><strong>Howard’s Lakeside General Store</strong><br>
+        1919 Croft Rd, Springfield, Ohio 45503</p>
+      </address>
+      <div class="map-wrap" aria-label="Map showing the store">
+        <iframe title="Map to Howard’s Lakeside General Store" src="https://www.google.com/maps?q=1919%20Croft%20Rd%20Springfield%20OH%2045503&output=embed" loading="lazy"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Howard’s Lakeside General Store</p>
+      <p><a href="./live-bait.html">Live Bait and Prices</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('nav');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        const exp = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!exp));
+        nav.classList.toggle('open');
+      });
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
